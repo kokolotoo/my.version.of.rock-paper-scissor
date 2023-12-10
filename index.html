@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Rock-Paper-Scissor</title>
+   <link rel="stylesheet" href="rock-paper-scissor.css">
+  </head>
+ 
+  <body>
+    
+    <div class="game">
+      <h2>! We play until 10 !</h2>   
+      <h1 class="game-name"> ! Rock ! -- !  Paper  ! -- !  Scissor !</h1>
+     
+      <div>
+        <img src="image/Rock.jpeg" 
+        alt="rock" class="rock-img">
+        <img src="image/paper.jpeg" alt="paper" class="paper-img">
+        <img src="image/scissor.jpeg" alt="scissor" class="scissor-img">
+      </div>
+        
+      <button onclick="
+        playGame('rock');
+        " class="rock">Rock !
+      </button>
+
+        
+      <button onclick="
+        playGame('paper');
+       " class="paper" >Paper !
+      </button>
+
+        
+      <button onclick="
+        playGame('scissors');
+        " class="scissor">Scissor !
+      </button>
+
+        
+      <p class="js-result"></p>
+        
+      <div class="moves">
+        <spam class="you">You</spam>
+        <spam class="js-moves"></spam>
+        <spam class="computer"> Computer</spam>
+      </div>
+      
+      <p class="js-score"></p>
+        
+        
+        
+      <button onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+        " class="reset-button">Reset Score
+      </button>
+        
+
+      <h3>Ruls:</h3>
+      <p>Rock wins against scissors.
+        Scissors win against paper.
+        Paper wins against rock.
+      </p>
+    </div>
+
+    <div class="pic">
+     <img src="image/congratulation.jpeg"  alt="congratulations"
+     style="display: none;" class="congratulations">
+
+     <img src="image/you lose.jpeg"
+     alt="sorry"  style="display: none;" class="YouLosse">
+
+     <img src="image/no-winner.jpeg" 
+     alt="no-winner" style="display:none;" class="no-wineer">
+    </div>
+
+      
+    <script src="rock-paper-scissor.js"></script>
+  </body>
+</html>
+
+     
+
